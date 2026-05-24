@@ -16,11 +16,17 @@ function App() {
       gameImage: gameImage
     }
 
-    const list = [...gameList, gamecard]
+    saveGameLocalStorage([...gameList, gamecard])
 
+  }
+
+  function saveGameLocalStorage(list) {
+
+    
     setGameList(list)
 
     localStorage.setItem("jogos", JSON.stringify(list))
+
   }
 
   return (
@@ -80,8 +86,7 @@ function App() {
               <h2>{game.name}</h2>
               <button onClick={() => {
                 const newList = gameList.filter((item) => item.id !== game.id)
-                setGameList(newList)
-                localStorage.setItem("jogos", JSON.stringify(newList))
+                saveGameLocalStorage(newList)
               }}>Remover</button>
             </div>
           )
