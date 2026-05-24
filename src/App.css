@@ -34,3 +34,26 @@ input {
   border: 2px solid var(--accent-border);
   /* border: 2px solid var(--accent); */
 }
+
+.game-card {
+  border: 2px solid var(--accent-border);
+  border-radius: 5px;
+  margin: 1em;
+  width: 250px;
+  height: 350px;
+}
+
+.game-image{
+  width: 200px;
+  height: 200px;
+  justify-content: cover;
+  margin: 10%;
+  
+  box-sizing: border-box;
+}
+
+main{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
